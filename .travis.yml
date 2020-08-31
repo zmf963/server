@@ -27,8 +27,12 @@ install:
 script:
   - make build-js
   - make embed-static
-  - make test
-  - make check
+  - docker run --rm --privileged multiarch/qemu-user-static:register --reset
+  - export VERSION=devel
+  - export LD_FLAGS="-w -s -X main.Version=${VERSION} -X main.BuildDate=$(date "+%F-%T") -X main.Commit=$(git rev-parse --verify HEAD) -X main.Mode=prod";
+  - make build-linux-arm-7
+  - sudo chown -R travis:travis build
+  - make build-docker-arm-7
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
@@ -44,6 +48,7 @@ before_deploy:
       sudo chown -R travis:travis build
       make package-zip;
       ls -lath build;
+      docker run --rm --privileged multiarch/qemu-user-static:register --reset;
       make build-docker;
     fi
 
