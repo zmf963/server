@@ -84,7 +84,7 @@ class Navigation extends Component<
                 <div className={classes.toolbar} />
                 <Link className={classes.link} to="/" onClick={() => setNavOpen(false)}>
                     <ListItem button disabled={!loggedIn} className="all">
-                        <ListItemText primary="All Messages" />
+                        <ListItemText primary="全部消息" />
                     </ListItem>
                 </Link>
                 <Divider />

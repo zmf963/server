@@ -36,16 +36,16 @@ export default class AddDialog extends Component<IProps, IState> {
                 aria-labelledby="form-dialog-title"
                 id="app-dialog"
             >
-                <DialogTitle id="form-dialog-title">Create an application</DialogTitle>
+                <DialogTitle id="form-dialog-title">添加一个应用</DialogTitle>
                 <DialogContent>
                     <DialogContentText>
-                        An application is allowed to send messages.
+                        允许应用程序发送消息。
                     </DialogContentText>
                     <TextField
                         autoFocus
                         margin="dense"
                         className="name"
-                        label="Name *"
+                        label="应用名称 *"
                         type="text"
                         value={name}
                         onChange={this.handleChange.bind(this, 'name')}
@@ -54,7 +54,7 @@ export default class AddDialog extends Component<IProps, IState> {
                     <TextField
                         margin="dense"
                         className="description"
-                        label="Short Description"
+                        label="应用简介"
                         value={description}
                         onChange={this.handleChange.bind(this, 'description')}
                         fullWidth
@@ -62,7 +62,7 @@ export default class AddDialog extends Component<IProps, IState> {
                     />
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={fClose}>Cancel</Button>
+                    <Button onClick={fClose}>取消</Button>
                     <Tooltip title={submitEnabled ? '' : 'name is required'}>
                         <div>
                             <Button
@@ -72,7 +72,7 @@ export default class AddDialog extends Component<IProps, IState> {
                                 color="primary"
                                 variant="contained"
                             >
-                                Create
+                                确认添加
                             </Button>
                         </div>
                     </Tooltip>

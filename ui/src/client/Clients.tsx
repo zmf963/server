@@ -42,7 +42,7 @@ class Clients extends Component<Stores<'clientStore'>> {
 
         return (
             <DefaultPage
-                title="Clients"
+                title="客户端列表"
                 rightControl={
                     <Button
                         id="create-client"
@@ -50,7 +50,7 @@ class Clients extends Component<Stores<'clientStore'>> {
                         color="primary"
                         onClick={() => (this.showDialog = true)}
                     >
-                        Create Client
+                        添加一个客户端
                     </Button>
                 }
             >
@@ -59,7 +59,7 @@ class Clients extends Component<Stores<'clientStore'>> {
                         <Table id="client-table">
                             <TableHead>
                                 <TableRow style={{textAlign: 'center'}}>
-                                    <TableCell>Name</TableCell>
+                                    <TableCell>客户端名称</TableCell>
                                     <TableCell style={{width: 200}}>Token</TableCell>
                                     <TableCell />
                                     <TableCell />

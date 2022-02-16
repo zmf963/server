@@ -69,7 +69,7 @@ class Users extends Component<WithStyles<'wrapper'> & Stores<'userStore'>> {
         const users = userStore.getItems();
         return (
             <DefaultPage
-                title="Users"
+                title="用户列表"
                 rightControl={
                     <Button
                         id="create-user"
@@ -77,7 +77,7 @@ class Users extends Component<WithStyles<'wrapper'> & Stores<'userStore'>> {
                         color="primary"
                         onClick={() => (this.createDialog = true)}
                     >
-                        Create User
+                        创建用户
                     </Button>
                 }
             >
@@ -86,8 +86,8 @@ class Users extends Component<WithStyles<'wrapper'> & Stores<'userStore'>> {
                         <Table id="user-table">
                             <TableHead>
                                 <TableRow style={{textAlign: 'center'}}>
-                                    <TableCell>Name</TableCell>
-                                    <TableCell>Admin</TableCell>
+                                    <TableCell>用户名</TableCell>
+                                    <TableCell>管理员权限</TableCell>
                                     <TableCell />
                                 </TableRow>
                             </TableHead>

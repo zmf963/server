@@ -47,7 +47,7 @@ class Applications extends Component<Stores<'appStore'>> {
         const apps = appStore.getItems();
         return (
             <DefaultPage
-                title="Applications"
+                title="应用列表"
                 rightControl={
                     <Button
                         id="create-app"
@@ -55,7 +55,7 @@ class Applications extends Component<Stores<'appStore'>> {
                         color="primary"
                         onClick={() => (this.createDialog = true)}
                     >
-                        Create Application
+                        添加应用
                     </Button>
                 }
                 maxWidth={1000}
@@ -66,9 +66,9 @@ class Applications extends Component<Stores<'appStore'>> {
                             <TableHead>
                                 <TableRow>
                                     <TableCell padding="checkbox" style={{width: 80}} />
-                                    <TableCell>Name</TableCell>
+                                    <TableCell>应用名称</TableCell>
                                     <TableCell>Token</TableCell>
-                                    <TableCell>Description</TableCell>
+                                    <TableCell>应用介绍</TableCell>
                                     <TableCell />
                                     <TableCell />
                                 </TableRow>

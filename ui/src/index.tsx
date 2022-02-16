@@ -1,3 +1,13 @@
+/*
+ * @Version: 0.1
+ * @Autor: zmf96
+ * @Email: zmf96@qq.com
+ * @Date: 2022-02-14 17:23:40
+ * @LastEditors: zmf96
+ * @LastEditTime: 2022-02-16 23:35:01
+ * @FilePath: /ui/src/index.tsx
+ * @Description: 
+ */
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import 'typeface-roboto';
@@ -16,7 +26,7 @@ import {ClientStore} from './client/ClientStore';
 import {PluginStore} from './plugin/PluginStore';
 import {registerReactions} from './reactions';
 
-const devUrl = 'http://localhost:3000/';
+const devUrl = 'http://localhost:3001/';
 
 const {port, hostname, protocol, pathname} = window.location;
 const slashes = protocol.concat('//');

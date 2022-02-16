@@ -47,14 +47,14 @@ export default class AddEditDialog extends Component<IProps, IState> {
                 id="add-edit-user-dialog"
             >
                 <DialogTitle id="form-dialog-title">
-                    {isEdit ? 'Edit ' + this.props.name : 'Add a user'}
+                    {isEdit ? '编辑 ' + this.props.name : '添加一个用户'}
                 </DialogTitle>
                 <DialogContent>
                     <TextField
                         autoFocus
                         margin="dense"
                         className="name"
-                        label="Name *"
+                        label="用户名 *"
                         type="email"
                         value={name}
                         onChange={this.handleChange.bind(this, 'name')}
@@ -66,7 +66,7 @@ export default class AddEditDialog extends Component<IProps, IState> {
                         type="password"
                         value={pass}
                         fullWidth
-                        label={isEdit ? 'Pass (empty if no change)' : 'Pass *'}
+                        label={isEdit ? '密码（如果没有更改，则为空）' : '密码 *'}
                         onChange={this.handleChange.bind(this, 'pass')}
                     />
                     <FormControlLabel
@@ -78,11 +78,11 @@ export default class AddEditDialog extends Component<IProps, IState> {
                                 value="admin"
                             />
                         }
-                        label="has administrator rights"
+                        label="拥有管理员权限"
                     />
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={fClose}>Cancel</Button>
+                    <Button onClick={fClose}>取消</Button>
                     <Tooltip
                         placement={'bottom-start'}
                         title={
@@ -101,7 +101,7 @@ export default class AddEditDialog extends Component<IProps, IState> {
                                 color="primary"
                                 variant="contained"
                             >
-                                {isEdit ? 'Save' : 'Create'}
+                                {isEdit ? '保存' : '添加'}
                             </Button>
                         </div>
                     </Tooltip>

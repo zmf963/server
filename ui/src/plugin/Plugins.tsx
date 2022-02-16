@@ -1,3 +1,13 @@
+/*
+ * @Version: 0.1
+ * @Autor: zmf96
+ * @Email: zmf96@qq.com
+ * @Date: 2022-02-14 17:23:40
+ * @LastEditors: zmf96
+ * @LastEditTime: 2022-02-17 00:13:55
+ * @FilePath: /ui/src/plugin/Plugins.tsx
+ * @Description: 
+ */
 import React, {Component, SFC} from 'react';
 import {Link} from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
@@ -25,7 +35,7 @@ class Plugins extends Component<Stores<'pluginStore'>> {
         } = this;
         const plugins = pluginStore.getItems();
         return (
-            <DefaultPage title="Plugins" maxWidth={1000}>
+            <DefaultPage title="插件列表" maxWidth={1000}>
                 <Grid item xs={12}>
                     <Paper elevation={6}>
                         <Table id="plugin-table">

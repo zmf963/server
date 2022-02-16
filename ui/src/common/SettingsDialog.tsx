@@ -1,3 +1,13 @@
+/*
+ * @Version: 0.1
+ * @Autor: zmf96
+ * @Email: zmf96@qq.com
+ * @Date: 2022-02-14 17:23:40
+ * @LastEditors: zmf96
+ * @LastEditTime: 2022-02-17 00:14:22
+ * @FilePath: /ui/src/common/SettingsDialog.tsx
+ * @Description: 
+ */
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -33,21 +43,21 @@ class SettingsDialog extends Component<IProps & Stores<'currentUser'>> {
                 aria-labelledby="form-dialog-title"
                 id="changepw-dialog"
             >
-                <DialogTitle id="form-dialog-title">Change Password</DialogTitle>
+                <DialogTitle id="form-dialog-title">修改密码</DialogTitle>
                 <DialogContent>
                     <TextField
                         className="newpass"
                         autoFocus
                         margin="dense"
                         type="password"
-                        label="New Password *"
+                        label="新密码 *"
                         value={pass}
                         onChange={(e) => (this.pass = e.target.value)}
                         fullWidth
                     />
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={fClose}>Cancel</Button>
+                    <Button onClick={fClose}>取消</Button>
                     <Tooltip title={pass.length !== 0 ? '' : 'Password is required'}>
                         <div>
                             <Button
@@ -57,7 +67,7 @@ class SettingsDialog extends Component<IProps & Stores<'currentUser'>> {
                                 color="primary"
                                 variant="contained"
                             >
-                                Change
+                                修改
                             </Button>
                         </div>
                     </Tooltip>

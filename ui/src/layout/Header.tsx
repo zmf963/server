@@ -158,19 +158,19 @@ class Header extends Component<IProps> {
                     <Link className={classes.link} to="/users" id="navigate-users">
                         <ResponsiveButton
                             icon={<SupervisorAccount />}
-                            label="users"
+                            label="用户"
                             width={width}
                             color="inherit"
                         />
                     </Link>
                 )}
                 <Link className={classes.link} to="/applications" id="navigate-apps">
-                    <ResponsiveButton icon={<Chat />} label="apps" width={width} color="inherit" />
+                    <ResponsiveButton icon={<Chat />} label="应用" width={width} color="inherit" />
                 </Link>
                 <Link className={classes.link} to="/clients" id="navigate-clients">
                     <ResponsiveButton
                         icon={<DevicesOther />}
-                        label="clients"
+                        label="客户端"
                         width={width}
                         color="inherit"
                     />
@@ -178,7 +178,7 @@ class Header extends Component<IProps> {
                 <Link className={classes.link} to="/plugins" id="navigate-plugins">
                     <ResponsiveButton
                         icon={<Apps />}
-                        label="plugins"
+                        label="插件"
                         width={width}
                         color="inherit"
                     />
@@ -193,7 +193,7 @@ class Header extends Component<IProps> {
                 />
                 <ResponsiveButton
                     icon={<ExitToApp />}
-                    label="Logout"
+                    label="登出"
                     onClick={logout}
                     id="logout"
                     width={width}
