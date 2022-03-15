@@ -22,14 +22,14 @@ class Login extends Component<Stores<'currentUser'>> {
     public render() {
         const {username, password, registerDialog} = this;
         return (
-            <DefaultPage title="Login" rightControl={this.registerButton()} maxWidth={250}>
+            <DefaultPage title="登录" rightControl={this.registerButton()} maxWidth={250}>
                 <Grid item xs={12} style={{textAlign: 'center'}}>
                     <Container>
                         <form onSubmit={this.preventDefault} id="login-form">
                             <TextField
                                 autoFocus
                                 className="name"
-                                label="Username"
+                                label="用户名"
                                 margin="dense"
                                 value={username}
                                 onChange={(e) => (this.username = e.target.value)}
@@ -37,7 +37,7 @@ class Login extends Component<Stores<'currentUser'>> {
                             <TextField
                                 type="password"
                                 className="password"
-                                label="Password"
+                                label="密码"
                                 margin="normal"
                                 value={password}
                                 onChange={(e) => (this.password = e.target.value)}
@@ -52,7 +52,7 @@ class Login extends Component<Stores<'currentUser'>> {
                                 style={{marginTop: 15, marginBottom: 5}}
                                 onClick={this.login}
                             >
-                                Login
+                                登录
                             </Button>
                         </form>
                     </Container>
@@ -81,7 +81,7 @@ class Login extends Component<Stores<'currentUser'>> {
                     color="primary"
                     onClick={() => (this.registerDialog = true)}
                 >
-                    Register
+                    注册
                 </Button>
             );
         else return null;

@@ -85,7 +85,7 @@ export default class RegistrationDialog extends Component<IProps, IState> {
                                 color="primary"
                                 variant="contained"
                             >
-                                Register
+                                注册
                             </Button>
                         </div>
                     </Tooltip>
